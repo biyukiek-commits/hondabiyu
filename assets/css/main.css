@@ -4045,13 +4045,14 @@ section,
 }
 
 .contact .sidebar-panel {
-  background: linear-gradient(160deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #7c3aed 40%));
+  background: linear-gradient(135deg, #d30000 0%, #990000 100%);
   border-radius: 30px;
   padding: 35px;
   height: 100%;
   color: var(--contrast-color);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 20px 50px rgba(204, 0, 0, 0.25);
 }
 
 .contact .sidebar-panel:before {
@@ -6667,4 +6668,217 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*--------------------------------------------------------------
+# Custom Honda Dealer Card & Promo Styling
+--------------------------------------------------------------*/
+.car-model-card {
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+.car-model-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(204, 0, 0, 0.12);
+  border-color: var(--accent-color);
+}
+
+.car-model-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #cc0000;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+.car-model-image {
+  margin: 15px 0 20px 0;
+  text-align: center;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-model-image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.car-model-card:hover .car-model-image img {
+  transform: scale(1.05);
+}
+
+.car-model-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 5px;
+  font-family: var(--heading-font);
+}
+
+.car-model-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #cc0000;
+  margin-bottom: 15px;
+}
+
+.car-model-specs {
+  border-top: 1px dashed color-mix(in srgb, var(--default-color), transparent 85%);
+  border-bottom: 1px dashed color-mix(in srgb, var(--default-color), transparent 85%);
+  padding: 12px 0;
+  margin-bottom: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  font-size: 12px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.car-spec-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.car-spec-item i {
+  color: #cc0000;
+  font-size: 14px;
+}
+
+.car-model-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.btn-car-outline {
+  flex: 1;
+  text-align: center;
+  padding: 8px 12px;
+  border: 1.5px solid var(--default-color);
+  color: var(--default-color);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+
+.btn-car-outline:hover {
+  background-color: var(--default-color);
+  color: var(--contrast-color);
+}
+
+.btn-car-solid {
+  flex: 1;
+  text-align: center;
+  padding: 8px 12px;
+  background-color: #cc0000;
+  color: #ffffff;
+  border: 1.5px solid #cc0000;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+
+.btn-car-solid:hover {
+  background-color: #a80000;
+  border-color: #a80000;
+  color: #ffffff;
+}
+
+/* Limited Offer Promo Banner Section */
+.promo-limited-section {
+  background: linear-gradient(135deg, #0f1016 0%, #1a1b26 100%);
+  color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 60px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.promo-limited-content {
+  padding: 40px;
+}
+
+.promo-tag {
+  color: #cc0000;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.promo-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.promo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.promo-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #e0e0e0;
+}
+
+.promo-list li i {
+  color: #cc0000;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.btn-claim-promo {
+  display: inline-block;
+  background-color: #cc0000;
+  color: #ffffff;
+  padding: 14px 30px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(204, 0, 0, 0.4);
+}
+
+.btn-claim-promo:hover {
+  background-color: #e60000;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(204, 0, 0, 0.6);
 }
